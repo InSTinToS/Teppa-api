@@ -1,0 +1,24 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "targets": { "node": "current" }, "loose": true }],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "cwd": "babelrc",
+        "alias": {
+          "@docs": ["./src/docs"],
+          "@types": ["./src/types"],
+          "@config": ["./src/config"],
+          "@shared": ["./src/shared"],
+          "@modules": ["./src/modules"]
+        }
+      }
+    ],
+    "babel-plugin-transform-typescript-metadata",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }]
+  ]
+}
