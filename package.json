@@ -10,7 +10,7 @@
   },
   "scripts": {
     "cd": "yarn install; yarn migrate; yarn build; yarn start",
-    "ci": "yarn install; node ./dist/server.js",
+    "ci": "yarn install; yarn build; node ./dist/server.js",
     "docker:dev": "yarn install; yarn migrate; yarn dev",
     "test": "clear && jest --runInBand",
     "app:up": "docker-compose up",
