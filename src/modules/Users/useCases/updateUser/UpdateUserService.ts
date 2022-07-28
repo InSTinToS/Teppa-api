@@ -1,5 +1,7 @@
 import { inject, injectable } from 'tsyringe'
 
+import { TExecute } from './types'
+
 import { AppError } from '@modules/Error/models/AppError'
 import type { IUsersRepository } from '@modules/Users/repositories/User/IUserRepository.types'
 
@@ -10,7 +12,7 @@ class UpdateUserService {
     private usersRepository: IUsersRepository
   ) {}
 
-  execute = async dataToUpdate => {
+  execute: TExecute = async dataToUpdate => {
     const user = await this.usersRepository.findById(dataToUpdate.id)
 
     if (!user) throw new AppError('User not found', 404)

@@ -1,12 +1,13 @@
 import { container } from 'tsyringe'
 
 import { ReadUsersService } from './ReadUsersService'
+import { THandle } from './types'
 
 import { AppError } from '@modules/Error/models/AppError'
 
 class ReadUsersController {
-  handle = async (req, res) => {
-    const id = req.params.id || res.locals.user?.id
+  handle: THandle = async (req, res) => {
+    const id = req.params.id
 
     const readUsersService = container.resolve(ReadUsersService)
 

@@ -1,5 +1,7 @@
 import { inject, injectable } from 'tsyringe'
 
+import { TExecute } from './types'
+
 import type { IUsersRepository } from '@modules/Users/repositories/User/IUserRepository.types'
 
 @injectable()
@@ -9,7 +11,7 @@ class CreateUserService {
     private usersRepository: IUsersRepository
   ) {}
 
-  execute = async data => {
+  execute: TExecute = async data => {
     const createdUser = await this.usersRepository.create({
       ...data,
       created_at: new Date().toISOString(),

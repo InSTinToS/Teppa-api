@@ -1,5 +1,7 @@
 import { inject, injectable } from 'tsyringe'
 
+import { TExecute } from './types'
+
 import { AppError } from '@modules/Error/models/AppError'
 import type { IUsersRepository } from '@modules/Users/repositories/User/IUserRepository.types'
 
@@ -10,7 +12,7 @@ class DeleteUserService {
     private usersRepository: IUsersRepository
   ) {}
 
-  execute = async id => {
+  execute: TExecute = async id => {
     const foundUser = await this.usersRepository.findById(id)
 
     if (!foundUser) throw new AppError('User does not exist', 400)

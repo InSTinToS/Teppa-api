@@ -1,5 +1,7 @@
 import { inject, injectable } from 'tsyringe'
 
+import { TExecute } from './types'
+
 import type { IUsersRepository } from '@modules/Users/repositories/User/IUserRepository.types'
 
 @injectable()
@@ -8,7 +10,7 @@ class ReadUsersService {
     @inject('UsersRepository') private usersRepository: IUsersRepository
   ) {}
 
-  execute = async id => {
+  execute: TExecute = async id => {
     if (id) {
       const user = await this.usersRepository.findById(id)
 
