@@ -1,6 +1,6 @@
 import { inject, injectable } from 'tsyringe'
 
-import { TExecute } from './types'
+import { TExecute } from './ReadUsers.types'
 
 import type { IUsersRepository } from '@modules/Users/repositories/User/IUserRepository.types'
 

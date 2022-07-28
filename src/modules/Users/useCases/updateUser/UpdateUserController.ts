@@ -1,7 +1,7 @@
 import { container } from 'tsyringe'
 
+import { THandle } from './UpdateUser.types'
 import { UpdateUserService } from './UpdateUserService'
-import { THandle } from './types'
 
 class UpdateUserController {
   handle: THandle = async (req, res) => {

@@ -2,17 +2,17 @@ import { RequestHandler } from 'express'
 
 import { IUserModel } from '@modules/Users/models/IUserModel'
 
-interface IResponse {
+interface IUpdateUserResponse {
   updatedUser: IUserModel
 }
 
 type THandle = RequestHandler<
   { id: IUserModel['id'] },
-  IResponse,
+  IUpdateUserResponse,
   IUserModel,
   void
 >
 
-type TExecute = (dataToUpdate: IUserModel) => Promise<IResponse>
+type TExecute = (dataToUpdate: IUserModel) => Promise<IUpdateUserResponse>
 
-export type { THandle, TExecute }
+export type { THandle, TExecute, IUpdateUserResponse }

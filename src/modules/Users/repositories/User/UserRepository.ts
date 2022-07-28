@@ -55,11 +55,11 @@ class UsersRepository implements IUsersRepository {
   findById: IUsersRepository['findById'] = async id => {
     const querySnapshot = await getDocs(collection(db, 'users'))
 
-    const foundUser = querySnapshot.docs
-      .find(doc => doc.id === id)
-      .data() as IUserModel
+    const foundUser = querySnapshot.docs.find(doc => doc.id === id)
 
-    return { ...foundUser, id }
+    return foundUser
+      ? { ...(foundUser.data() as IUserModel), id: foundUser.id }
+      : undefined
   }
 
   findByEmail: IUsersRepository['findByEmail'] = async email => {

@@ -1,7 +1,7 @@
 import { container } from 'tsyringe'
 
+import { THandle } from './ReadUsers.types'
 import { ReadUsersService } from './ReadUsersService'
-import { THandle } from './types'
 
 import { AppError } from '@modules/Error/models/AppError'
 

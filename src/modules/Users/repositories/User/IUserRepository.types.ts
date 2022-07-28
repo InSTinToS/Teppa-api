@@ -1,6 +1,6 @@
 import { IUserModel } from '@modules/Users/models/IUserModel'
 
-type TCreate = (data: IUserModel) => Promise<IUserModel>
+type TCreate = (data: Omit<IUserModel, 'id'>) => Promise<IUserModel>
 
 type TFindById = (id: IUserModel['id']) => Promise<IUserModel>
 
