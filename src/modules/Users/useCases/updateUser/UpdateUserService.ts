@@ -17,11 +17,14 @@ class UpdateUserService {
 
     if (!user) throw new AppError('User not found', 404)
 
-    if (
-      dataToUpdate.email &&
-      (await this.usersRepository.findByEmail(dataToUpdate.email))
+    const foundByEmail = await this.usersRepository.findByEmail(
+      dataToUpdate.email
     )
-      throw new AppError('Email already exists')
+
+    const emailAlreadyExists =
+      dataToUpdate.email && foundByEmail && foundByEmail.id !== dataToUpdate.id
+
+    if (emailAlreadyExists) throw new AppError('Email already exists')
 
     const updatedUser = await this.usersRepository.update(dataToUpdate)
 

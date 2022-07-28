@@ -2,6 +2,7 @@ import { inject, injectable } from 'tsyringe'
 
 import { TExecute } from './types'
 
+import { AppError } from '@modules/Error/models/AppError'
 import type { IUsersRepository } from '@modules/Users/repositories/User/IUserRepository.types'
 
 @injectable()
@@ -12,6 +13,10 @@ class CreateUserService {
   ) {}
 
   execute: TExecute = async data => {
+    const foundByEmail = await this.usersRepository.findByEmail(data.email)
+
+    if (foundByEmail) throw new AppError('E-mail already exists', 400)
+
     const createdUser = await this.usersRepository.create({
       ...data,
       created_at: new Date().toISOString(),
