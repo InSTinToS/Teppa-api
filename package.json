@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x",
+    "yarn": "1.x"
+  },
   "scripts": {
     "cd": "yarn install; yarn migrate; yarn build; yarn start",
-    "ci": "yarn install; yarn migrate; yarn test; yarn dev",
+    "ci": "yarn install; node ./dist/server.js",
     "docker:dev": "yarn install; yarn migrate; yarn dev",
     "test": "clear && jest --runInBand",
     "app:up": "docker-compose up",
