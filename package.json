@@ -1,7 +1,7 @@
 {
   "name": "teppa-multistep",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "engines": {
     "node": "16.x",
@@ -9,23 +9,12 @@
     "yarn": "1.x"
   },
   "scripts": {
-    "cd": "yarn install; yarn migrate; yarn build; yarn start",
-    "ci": "yarn install; node ./dist/server.js",
-    "docker:dev": "yarn install; yarn migrate; yarn dev",
-    "test": "clear && jest --runInBand",
-    "app:up": "docker-compose up",
-    "api:entry": "docker exec -it myapi bash",
-    "ci:test": "docker exec myapi yarn jest --runInBand --collectCoverage=false",
-    "build": "babel src --extensions \".ts,.js\" --out-dir dist --copy-files ",
-    "docker:prune": "docker-compose down && docker system prune -a -f --volumes",
-    "migrate": "dotenv -- cross-var \"pg-migrations apply -D ./src/shared/migrations/ -c postgres://%DB_USER%:%DB_PASSWORD%@mydatabase:%DB_PORT%/%DB_NAME%\"",
-    "dev": "ts-node-dev --poll --respawn -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/server.ts",
-<<<<<<< HEAD
-    "start": "node dist/server.js"
-=======
     "start": "node dist/server.js",
+    "ci": "yarn install; node ./dist/server.js",
+    "test": "clear && jest --runInBand",
+    "build": "babel src --extensions \".ts,.js\" --out-dir dist --copy-files ",
+    "dev": "ts-node-dev --poll --respawn -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "postinstall": "tsc"
->>>>>>> master
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
@@ -83,6 +72,7 @@
     "firebase": "^9.9.1",
     "js-yaml": "^4.1.0",
     "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
     "pg": "^8.7.3",
     "swagger-ui-express": "^4.4.0",
     "uuidv4": "^6.2.13",

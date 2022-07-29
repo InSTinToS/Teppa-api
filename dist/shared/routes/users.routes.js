@@ -5,13 +5,13 @@ exports.usersRoutes = void 0;
 
 var _express = require("express");
 
-var _CreateUserController = require("@modules/Users/useCases/createUser/CreateUserController");
+var _CreateUserController = require("../../../dist/modules/Users/useCases/createUser/CreateUserController");
 
-var _DeleteUserController = require("@modules/Users/useCases/deleteUser/DeleteUserController");
+var _DeleteUserController = require("../../../dist/modules/Users/useCases/deleteUser/DeleteUserController");
 
-var _ReadUsersController = require("@modules/Users/useCases/readUsers/ReadUsersController");
+var _ReadUsersController = require("../../../dist/modules/Users/useCases/readUsers/ReadUsersController");
 
-var _UpdateUserController = require("@modules/Users/useCases/updateUser/UpdateUserController");
+var _UpdateUserController = require("../../../dist/modules/Users/useCases/updateUser/UpdateUserController");
 
 const usersRoutes = (0, _express.Router)();
 exports.usersRoutes = usersRoutes;

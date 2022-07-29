@@ -13,7 +13,7 @@ require("express-async-errors");
 
 var _users = require("./users.routes");
 
-var _ThrowAppErrorController = require("@modules/Error/useCases/throwError/ThrowAppErrorController");
+var _ThrowAppErrorController = require("../../../dist/modules/Error/useCases/throwError/ThrowAppErrorController");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

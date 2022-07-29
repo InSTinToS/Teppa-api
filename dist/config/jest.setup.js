@@ -2,4 +2,4 @@
 
 require("reflect-metadata");
 
-require("@shared/containers");
+require("../../dist/shared/containers");

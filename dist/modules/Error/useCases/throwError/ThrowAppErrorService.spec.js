@@ -2,7 +2,7 @@
 
 var _ThrowAppErrorService = require("./ThrowAppErrorService");
 
-var _AppError = require("@modules/Error/models/AppError");
+var _AppError = require("../../../../../dist/modules/Error/models/AppError");
 
 let throwAppErrorService;
 describe('ThrowAppErrorService', () => {

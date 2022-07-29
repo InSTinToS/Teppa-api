@@ -5,7 +5,7 @@ exports.DeleteUserService = void 0;
 
 var _tsyringe = require("tsyringe");
 
-var _AppError = require("@modules/Error/models/AppError");
+var _AppError = require("../../../../../dist/modules/Error/models/AppError");
 
 var _dec, _dec2, _dec3, _dec4, _class;
 

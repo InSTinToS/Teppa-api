@@ -9,11 +9,11 @@
       {
         "cwd": "babelrc",
         "alias": {
-          "@docs": ["./src/docs"],
-          "@types": ["./src/types"],
-          "@config": ["./src/config"],
-          "@shared": ["./src/shared"],
-          "@modules": ["./src/modules"]
+          "@docs": ["./dist/docs"],
+          "@types": ["./dist/types"],
+          "@config": ["./dist/config"],
+          "@shared": ["./dist/shared"],
+          "@modules": ["./dist/modules"]
         }
       }
     ],

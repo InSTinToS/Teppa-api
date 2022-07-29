@@ -2,9 +2,9 @@
 
 var _supertest = _interopRequireDefault(require("supertest"));
 
-var _routes = require("@shared/routes");
+var _routes = require("../../../../../dist/shared/routes");
 
-var _createUserData = _interopRequireDefault(require("@shared/utils/tests/createUserData"));
+var _createUserData = _interopRequireDefault(require("../../../../../dist/shared/utils/tests/createUserData"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

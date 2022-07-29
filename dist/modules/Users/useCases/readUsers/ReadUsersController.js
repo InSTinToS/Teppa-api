@@ -7,7 +7,7 @@ var _tsyringe = require("tsyringe");
 
 var _ReadUsersService = require("./ReadUsersService");
 
-var _AppError = require("@modules/Error/models/AppError");
+var _AppError = require("../../../../../dist/modules/Error/models/AppError");
 
 class ReadUsersController {
   constructor() {

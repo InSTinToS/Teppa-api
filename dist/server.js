@@ -2,11 +2,13 @@
 
 require("dotenv/config");
 
+require("module-alias/register");
+
 require("reflect-metadata");
 
-require("@shared/containers");
+require("../dist/shared/containers");
 
-var _routes = require("@shared/routes");
+var _routes = require("../dist/shared/routes");
 
 const port = process.env.API_PORT;
 
