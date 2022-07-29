@@ -10,6 +10,6 @@ require("../dist/shared/containers");
 
 var _routes = require("../dist/shared/routes");
 
-const port = process.env.API_PORT;
+const port = process.env.PORT;
 
 _routes.app.listen(port, () => console.log(`Running at ${port}`));
