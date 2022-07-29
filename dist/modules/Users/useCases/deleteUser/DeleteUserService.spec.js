@@ -2,11 +2,11 @@
 
 var _DeleteUserService = require("./DeleteUserService");
 
-var _AppError = require("@modules/Error/models/AppError");
+var _AppError = require("../../../../../dist/modules/Error/models/AppError");
 
-var _UserRepositoryInMemory = require("@modules/Users/repositories/User/UserRepositoryInMemory");
+var _UserRepositoryInMemory = require("../../../../../dist/modules/Users/repositories/User/UserRepositoryInMemory");
 
-var _createUserData = _interopRequireDefault(require("@shared/utils/tests/createUserData"));
+var _createUserData = _interopRequireDefault(require("../../../../../dist/shared/utils/tests/createUserData"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

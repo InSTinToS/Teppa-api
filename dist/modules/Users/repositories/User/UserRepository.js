@@ -5,7 +5,7 @@ exports.UsersRepository = void 0;
 
 var _firestore = require("firebase/firestore");
 
-var _database = _interopRequireDefault(require("@shared/database"));
+var _database = _interopRequireDefault(require("../../../../../dist/shared/database"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
